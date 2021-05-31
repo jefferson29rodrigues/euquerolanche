@@ -1,4 +1,5 @@
 const express = require('express');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
@@ -12,7 +13,8 @@ app.post('/user', (request, response) => {
     usuarios.push({
         name,
         username,
-        id
+        uuid: uuidv4(),
+        created_at: new Date()
     })
 
     return response.status(201).json(usuarios);
