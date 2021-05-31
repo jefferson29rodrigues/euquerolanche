@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/jefferson29rodrigues/todo-ignite.git",
   "author": "Jefferson Rodrigues <jeffersonrodrigues5030@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
