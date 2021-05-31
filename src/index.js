@@ -20,4 +20,20 @@ app.post('/user', (request, response) => {
     return response.status(201).json(usuarios);
 });
 
+const todos = [];
+
+app.post('/todo', (request, response) => {
+    const { title, deadline } = request.body;
+
+    todos.push({
+        title,
+        deadline,
+        check: false,
+        uuid: uuidv4(),
+        created_at: new Date()
+    });
+
+    return response.status(201).json(todos);
+})
+
 app.listen(3333, console.log('Servidor Rodando!!! Fla!'));
